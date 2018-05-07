@@ -14,7 +14,6 @@ for movie in favorite_movies:
 	parser = json.loads(r.text) #convert json into parseable form	
 	#extract values for title, plot, poster and imdb ID
 	title = parser['Title'] 
-	storyline = parser['Plot']
 	poster_image_url = parser['Poster']
 	imdbID = parser['imdbID']
 	#new url request for youtube API to get trailer
@@ -23,7 +22,7 @@ for movie in favorite_movies:
 	trailer_youtube_id = parser2['items'][0]['id']['videoId'] #extract youtube video id
 	trailer_youtube_url = 'https://www.youtube.com/watch?v='+trailer_youtube_id
 	
-	movie_object = media.Movie(title, storyline, poster_image_url, trailer_youtube_url) #create movie object and append to list
+	movie_object = media.Movie(title, poster_image_url, trailer_youtube_url) #create movie object and append to list
 	movie_list.append(movie_object)
 	print(movie_object.title)
 
