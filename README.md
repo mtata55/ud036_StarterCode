@@ -2,7 +2,7 @@
 
 **Description**<br />
 Source code for a Movie Trailer website.<br />
-This project dynamically generates a website for a defined list of movies <br />
+This project dynamically generates a website for a defined list of movies
 showing their name, poster and a link to their trailer on youtube. 
 
 **Contents:**<br />
@@ -14,9 +14,8 @@ fresh_tomatoes.html (Generated html file)
 
 **Getting Started:**<br />
 Open the fresh_tomatoes.html file to see the generated output.<br />
-If you want to change the input list of movies, open the <br />
-entertainment_center.py file, update the movies in the favourite_movies list<br />
-and run this file again. It will generate a new fresh_tomatoes.html file and<br />
+If you want to change the input list of movies, open the entertainment_center.py file, update the movies in the favourite_movies list
+and run this file again. It will generate a new fresh_tomatoes.html file and
 open it in the browser.
 
 
