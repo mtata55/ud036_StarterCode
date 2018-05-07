@@ -38,6 +38,8 @@ main_page_head = '''
         .movie-tile {
             margin-bottom: 20px;
             padding-top: 20px;
+            border-style:solid;
+            border-color: #333;
         }
         .movie-tile:hover {
             background-color: #EEE;
@@ -114,7 +116,7 @@ main_page_content = '''
     </div>
     <div class="container">
       {movie_tiles}
-    </div>
+    </div>        
   </body>
 </html>
 '''
