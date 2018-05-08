@@ -19,7 +19,7 @@ and run this file again. It will generate a new fresh_tomatoes.html file and
 open it in the browser.
 
 
-**Prerequesites:**<br />
+**Prerequisites:**<br />
 Python 3 <br />
 Browser
 
