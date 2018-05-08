@@ -8,7 +8,11 @@ favorite_movies=['the godfather part II','the matrix','saw','ocean\'s eleven',
  'requiem for a dream', 'pulp fiction','inglourious basterds','school of rock','fight club',
  '12 angry men','the usual suspects','the silence of the lambs','the social network','phone booth'] # list of favorite movies by common search terms
 
+print('Please wait, movie data is being called through API\'s...' ) #added print statement to clarify waiting time 
+print('The browser window will open automatically when the website is ready' )
+
 movie_list = []
+
 for movie in favorite_movies: 
 	r = requests.get('http://www.omdbapi.com/?t='+movie+'&apikey=481969a1') #search for movie data using API
 	parser = json.loads(r.text) #convert json into parseable form	
@@ -22,10 +26,12 @@ for movie in favorite_movies:
 	trailer_youtube_id = parser2['items'][0]['id']['videoId'] #extract youtube video id
 	trailer_youtube_url = 'https://www.youtube.com/watch?v='+trailer_youtube_id
 	
-	movie_object = media.Movie(title, poster_image_url, trailer_youtube_url) #create movie object and append to list
+	#create movie object and append to list
+	movie_object = media.Movie(title, poster_image_url, trailer_youtube_url) 
 	movie_list.append(movie_object)
-	print(movie_object.title)
+	#print(movie_object.title) #commented out testing code
 
+print('Website Generated!')#print when loop complete and list generated
 fresh_tomatoes.open_movies_page(movie_list)
 
 
